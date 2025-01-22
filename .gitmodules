@@ -1,0 +1,7 @@
+[submodule "BackEnd"]
+    path = BackEnd
+    url = https://github.com/LeeMing-Bou/BackEnd-DevOps.git
+
+[submodule "FrontEnd"]
+    path = FrontEnd
+    url = https://github.com/LeeMing-Bou/FrontEnd-DevOps.git

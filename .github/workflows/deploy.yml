@@ -1,0 +1,25 @@
+name: Assignment DevOps 
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: 154.38.169.101
+          username: leeming
+          key: admin
+          port: 8899
+          script: |
+            . ~/.nvm/nvm.sh
+            whoami
+            pwd
+            ls
+            cd Assignment-DevOps
+            git pull
+            pm2 restart lmServer

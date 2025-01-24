@@ -1,15 +1,16 @@
 #CI Headline
 name: Test API
-#WorkFlow Will be proceeded based on condition
+#WorkFlow Will be proceeded based on condition below
 on:
   push:
     branches: main
   pull_request:
     branches: main
-#Processing Step
+#Task
 jobs:
   test:
     runs-on: ubuntu-22.04
+    #Processing Step
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2

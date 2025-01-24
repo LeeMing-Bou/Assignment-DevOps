@@ -1,0 +1,12 @@
+FROM node:16.20.2-slim
+
+WORKDIR /app
+ENV NODE_ENV development
+COPY BackEnd/package.json BackEnd/yarn.lock ./
+RUN yarn install
+
+COPY BackEnd ./
+
+EXPOSE 9000
+
+CMD [ "yarn", "start:dev" ]

@@ -4,7 +4,7 @@ WORKDIR /app
 COPY FrontEnd/package.json FrontEnd/yarn.lock ./
 RUN yarn install
 
-COPY FrontEnd ./
+COPY FrontEnd/ ./
 
 RUN yarn build
 

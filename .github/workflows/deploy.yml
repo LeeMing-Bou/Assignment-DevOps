@@ -20,6 +20,8 @@ jobs:
             whoami
             pwd
             ls
-            cd Assignment-DevOps
             git pull
+            git submodule init
+            git submodule update
+            cd Assignment-DevOps
             pm2 restart lmServer

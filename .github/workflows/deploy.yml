@@ -13,15 +13,19 @@ jobs:
         with:
           host: 167.86.93.59
           username: leeming
-          key: ${{secrets.SSH_KEY}}
+          key: ${{ secrets.SSH_KEY }}
           port: 8899
           script: |
             . ~/.nvm/nvm.sh
             whoami
             pwd
             ls
+            nvm install 16
+            nvm use 16
             git pull
             git submodule init
             git submodule update
             cd Assignment-DevOps
             pm2 restart devops-server
+            docker-compose build
+            docker-compose up -d

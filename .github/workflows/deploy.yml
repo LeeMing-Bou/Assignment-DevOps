@@ -11,7 +11,7 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: 154.38.169.101
+          host: 167.86.93.59
           username: leeming
           key: ${{secrets.SSH_KEY}}
           port: 8899
@@ -24,4 +24,4 @@ jobs:
             git submodule init
             git submodule update
             cd Assignment-DevOps
-            pm2 restart lmServer
+            pm2 restart devops-server

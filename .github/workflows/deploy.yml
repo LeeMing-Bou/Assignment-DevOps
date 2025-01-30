@@ -27,6 +27,6 @@ jobs:
             git submodule update
             cd Assignment-DevOps
             pm2 restart devops-server
-            docker compose down
-            docker-compose build
-            docker-compose up -d
+            # docker compose down
+            # docker-compose build
+            # docker-compose up -d

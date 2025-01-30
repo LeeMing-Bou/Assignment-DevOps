@@ -25,8 +25,6 @@ services:
       - NEST_HOST=nest
       - NEST_PORT=3000
       - NGINX_MAX_BODY=100M
-    ports:
-      - 80:80
   frontend-site:
     build: 
       context: .

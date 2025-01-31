@@ -30,8 +30,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: frontend-project
-    ports:
-      - 8000:8000
+    # ports:
+    #   - 8000:8000
   db:
     image: postgres:12
     container_name: tfd-nest-db

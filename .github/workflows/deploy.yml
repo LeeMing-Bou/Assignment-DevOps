@@ -26,7 +26,7 @@ jobs:
             ls
             nvm install 16
             nvm use 16
-            # pm2 restart devops-server
-            docker-compose down
+            pm2 restart frontend
+            # docker-compose down
             docker-compose build
             docker-compose up -d

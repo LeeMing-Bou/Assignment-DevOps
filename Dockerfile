@@ -8,6 +8,6 @@ COPY FrontEnd/ ./
 
 RUN yarn build
 
-EXPOSE 8000
+EXPOSE 3000
 
 CMD [ "yarn", "start" ]

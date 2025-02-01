@@ -7,6 +7,6 @@ RUN yarn install
 
 COPY BackEnd ./
 
-EXPOSE 9000
+EXPOSE 4000
 
 CMD [ "yarn", "start:dev" ]

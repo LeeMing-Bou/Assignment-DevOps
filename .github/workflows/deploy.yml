@@ -12,9 +12,9 @@ jobs:
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: 167.86.93.59
-          username: leeming
+          username: root
           key: ${{ secrets.SSH_KEY }}
-          port: 8899
+          port: 9899
           script: |
             . ~/.nvm/nvm.sh
             cd Assignment-DevOps
@@ -27,6 +27,6 @@ jobs:
             nvm install 16
             nvm use 16
             # pm2 restart devops-server
-            # docker-compose down
-            # docker-compose build
-            # docker-compose up
+            docker-compose down
+            docker-compose build
+            docker-compose up -d

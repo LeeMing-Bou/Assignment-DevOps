@@ -1,4 +1,4 @@
-name: Here is my Assignment DevOps 
+name: Assignment-DevOps 
 on:
   push:
     branches: main
@@ -19,14 +19,14 @@ jobs:
             . ~/.nvm/nvm.sh
             cd Assignment-DevOps
             git pull
-            git submodule init --recursive
-            git submodule update --recursive
+            git submodule init
+            git submodule update
             whoami
             pwd
             ls
             nvm install 16
             nvm use 16
-            pm2 restart frontend
             docker-compose down
             docker-compose build
             docker-compose up -d
+            pm2 restart frontend

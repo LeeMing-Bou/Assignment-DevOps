@@ -19,8 +19,8 @@ jobs:
             . ~/.nvm/nvm.sh
             cd Assignment-DevOps
             git pull
-            git submodule init
-            git submodule update
+            git submodule init --recursive
+            git submodule update --recursive
             whoami
             pwd
             ls
